@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder and Files</title>
+    <style>
+        /* General Reset */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #6c63ff;
+            color: white;
+            padding: 20px;
+            margin: 0;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .folder {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            background-color: #f9f9fc;
+        }
+
+        .folder h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #6c63ff;
+        }
+
+        .folder ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0;
+        }
+
+        .folder ul li {
+            background: #f0f0f5;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .folder ul li:hover {
+            background: #e4e4f2;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #6c63ff;
+            color: white;
+            font-size: 0.9rem;
+            margin-top: 30px;
+        }
+
+        footer a {
+            color: #ffdb58;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Instructor and Courses Offerered By Them</h1>
+    <div class="container">
+        {% for folder, files in folder_file_data.items() %}
+        <div class="folder">
+            <h2>{{ folder }}</h2>
+            <ul>
+                {% for file in files %}
+                <li>{{ file }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

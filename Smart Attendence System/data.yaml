@@ -1,0 +1,7 @@
+
+    train: 'D:/DNN PROJECT 2024 MS-351/MTCNN_Applied_dataset_file/images/train'
+    val: 'D:/DNN PROJECT 2024 MS-351/MTCNN_Applied_dataset_file/images/val'
+
+    nc: 5
+    names: ["Ahsan Saleem", "Asad Irfan", "HassaN", "Mubashir Muhammad Khalid", "Taapsee_Pannu"]
+    

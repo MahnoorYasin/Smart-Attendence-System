@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <style>
+    /* General Reset */
+    body {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      font-family: "Open Sans", sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: #2b3e51;
+    }
+
+    h2 {
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    #login-form-wrap {
+      background-color: #fff;
+      padding: 30px;
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    #login-form p {
+      margin: 20px 0;
+    }
+
+    input[type="text"], 
+    input[type="password"], 
+    button {
+      width: calc(100% - 20px); /* Adjusted to fit container perfectly */
+      padding: 12px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 10px;
+      box-sizing: border-box; /* Ensures consistent padding and width */
+    }
+
+    input[type="text"]:focus, 
+    input[type="password"]:focus {
+      border-color: #4facfe;
+      box-shadow: 0 0 5px rgba(79, 172, 254, 0.5);
+      outline: none;
+    }
+
+    button {
+      width: calc(100% - 20px); /* Matches input width */
+      padding: 12px 10px;
+      background: #4facfe;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background 0.3s ease;
+      box-sizing: border-box; /* Ensures alignment */
+    }
+
+    button:hover {
+      background: #007bff;
+    }
+
+    #create-account-wrap {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #666;
+    }
+
+    #create-account-wrap a {
+      color: #4facfe;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #create-account-wrap a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div id="login-form-wrap">
+    <h2>Login</h2>
+    <form id="login-form" action="/" method="POST">
+      <p>
+        <input type="text" id="username" name="username" placeholder="Username" required>
+      </p>
+      <p>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </p>
+      <p>
+        <input type="text" id="designation" name="designation" placeholder="Designation" required>
+      </p>
+      <p>
+        <button name="submit" id="login">Submit</button>
+      </p>
+    </form>
+    <div id="create-account-wrap">
+      <p>Not a member? <a href="/register">Register</a></p>
+    </div>
+  </div>
+</body>
+</html>
